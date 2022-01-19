@@ -1,0 +1,38 @@
+@use 'mixins' as mx;
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+.custom-container {
+  margin: 0 auto;
+  @include mx.screen-max(768px) {
+    max-width: 90%;
+  }
+  @include mx.screen-min(768px) {
+    width: 90%;
+    max-width: 128rem;
+  }
+}
+
+.logo-container {
+  .logo {
+    display: flex;
+    align-items: baseline;
+    position: relative;
+    padding-right: 0.6rem;
+    .img-white-line {
+      position: absolute;
+      top: 0.33rem;
+      right: 0.3rem;
+      z-index: 20;
+    }
+    .img-pink-line {
+      position: absolute;
+      top: 0.7rem;
+      right: 0;
+      z-index: 10;
+    }
+  }
+}

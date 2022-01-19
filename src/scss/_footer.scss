@@ -1,0 +1,35 @@
+@use 'variables' as v;
+@use 'mixins' as mx;
+
+.pink-line {
+  height: 0.6rem;
+  background-color: v.$pinkColorMain;
+}
+
+.footer {
+  background-color: v.$darkLight;
+  color: #fff;
+  .footer-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0;
+  }
+  .logo-container {
+    .footer-logo-container {
+      @include mx.screen-max(768px) {display: none;}
+      .img-white-line {
+        filter: invert(80%);
+      }
+    }
+  }
+  .footer-copyright {
+    h2 {
+      font-family: 'Nunito Sans';
+      font-weight: 400;
+      font-size: 1.9rem;
+      margin: 0;
+    }
+  }
+}

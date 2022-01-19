@@ -1,0 +1,45 @@
+@use 'variables' as v;
+@use 'mixins' as mx;
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6.8rem;
+  .actions {
+    .login {
+      @include mx.screen-max(768px) { display: none;}
+      .btn-login {
+        background-color: v.$pinkColorMain;
+        text-transform: uppercase;
+        border-radius: 0.8rem;
+        color: #fff;
+        padding: 1.2rem 2rem;
+        font-weight: 500;
+        outline: none;
+        border: none;
+      }
+    }
+    .hamburger {
+      @include mx.screen-min(768px){ display: none;}
+      width: 4rem;
+      height: 3.6rem;
+      background-color: v.$pinkColorMain;
+      border-radius: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding: 1rem;
+      cursor: pointer;
+      span {
+        height: 0.2rem;
+        background-color: #fff;
+        border-radius: 1rem;
+        width: 100%;
+      }
+      span:nth-child(2) {
+        width: 70%;
+      }
+    }
+  }
+}
