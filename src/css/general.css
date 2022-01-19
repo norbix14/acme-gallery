@@ -1,0 +1,35 @@
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+.custom-container {
+  margin: 0 auto;
+}
+
+.img-white-line {
+  position: absolute;
+  top: 0.33rem;
+  right: 0.3rem;
+  z-index: 20;
+}
+
+.img-pink-line {
+  position: absolute;
+  top: 0.7rem;
+  right: 0;
+  z-index: 10;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .custom-container {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .custom-container {
+    width: 90%;
+    max-width: 128rem;
+  }
+}
