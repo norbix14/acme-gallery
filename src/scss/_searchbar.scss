@@ -14,7 +14,6 @@
       .input-data {
         background-color: #ececec;
         position: relative;
-        margin: 0 0 0 1rem;
         border-radius: 0.4rem;
         overflow: hidden;
         display: flex;
@@ -39,6 +38,7 @@
 
 @media only screen and (min-width: 768px) {
   .input-data {
+    margin: 0 0 0 1rem;
     input {
       width: 85%;
     }
