@@ -1,3 +1,4 @@
+@use 'variables' as v;
 @use 'mixins' as mx;
 
 .container-fluid {
@@ -17,22 +18,43 @@
 }
 
 .logo-container {
+  .logo.header-logo-container {
+    .icon-acme {
+      fill: v.$pinkColorMain;
+    }
+    .icon-gallery {
+      fill: v.$darkLight2;
+    }
+  }
+  .logo.footer-logo-container {
+    .icon-acme {
+      fill: #fff;
+    }
+    .icon-gallery {
+      fill: #fff;
+    }
+    .icon-white-line {
+      fill: v.$darkLight;
+    }
+  }
   .logo {
     display: flex;
     align-items: baseline;
     position: relative;
     padding-right: 0.6rem;
-    .img-white-line {
+    .icon-white-line {
       position: absolute;
-      top: 0.33rem;
+      top: 0.4rem;
       right: 0.3rem;
       z-index: 20;
+      fill: #fff;
     }
-    .img-pink-line {
+    .icon-pink-line {
       position: absolute;
       top: 0.7rem;
       right: 0;
       z-index: 10;
+      fill: v.$pinkColorMain;
     }
   }
 }

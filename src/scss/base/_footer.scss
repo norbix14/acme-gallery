@@ -18,9 +18,6 @@
       @include mx.screen-max(768px) {
         display: none;
       }
-      .img-white-line {
-        filter: invert(80%);
-      }
     }
   }
   .footer-copyright {
