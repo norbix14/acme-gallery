@@ -7,23 +7,36 @@
 
 ## Installation
 
+### clone repo **(gh CLI)**
+
 ```
-// clone repo (gh CLI)
 gh repo clone norbix14/acme-gallery acme
+```
 
-// clone repo (git clone)
+### clone repo **(git)**
+
+```
 git clone https://github.com/norbix14/acme-gallery.git acme
+```
+### next steps
 
-// next steps
+```
 cd acme
+```
 
-// install dependencies
+### install dependencies
+
+```
 npm i
+```
 
-// run app (vite)
+### run app (vite)
+
+```
 npm run dev
+```
 
-// build
-npm run build
-serve -s -l 4000 dist/
+### build
+```
+npm run build && serve -s -l 4000 dist/
 ```
