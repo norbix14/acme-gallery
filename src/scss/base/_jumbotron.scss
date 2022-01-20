@@ -1,3 +1,5 @@
+@use '../mixins' as mx;
+
 .header-jumbotron {
   background: linear-gradient(
       0deg,
@@ -5,7 +7,7 @@
       rgba(178, 178, 178, 0.2)
     ),
     linear-gradient(0deg, rgba(237, 52, 132, 0.5), rgba(237, 52, 132, 0.5)),
-    url(../img/gallery/camille-couvez-H5PnIYI_1I0-unsplash.jpg);
+    url("../img/gallery/camille-couvez-H5PnIYI_1I0-unsplash.jpg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,9 +18,7 @@
     height: 20rem;
     padding: 2rem 0;
     h2 {
-      color: #fff;
-      font-size: 4rem;
-      font-weight: 700;
+      @include mx.font-roboto($size: 6rem, $weight: 700, $color: #fff);
     }
   }
 }

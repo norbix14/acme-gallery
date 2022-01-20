@@ -22,4 +22,8 @@ npm i
 
 // run app (vite)
 npm run dev
+
+// build
+npm run build
+serve -s -l 4000 dist/
 ```

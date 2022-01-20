@@ -1,0 +1,13 @@
+@mixin font-nunito($size: 1.6rem, $weight: 400, $color: #000) {
+  font-family: 'Nunito Sans';
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin font-roboto($size: 1.6rem, $weight: 400, $color: #000) {
+  font-family: 'Roboto';
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+}

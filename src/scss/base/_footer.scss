@@ -1,5 +1,5 @@
-@use 'variables' as v;
-@use 'mixins' as mx;
+@use '../variables' as v;
+@use '../mixins' as mx;
 
 .pink-line {
   height: 0.6rem;
@@ -8,17 +8,16 @@
 
 .footer {
   background-color: v.$darkLight;
-  color: #fff;
   .footer-body {
-    display: flex;
+    @include mx.flex-align-center;
     justify-content: center;
-    align-items: center;
-    gap: 2rem;
     padding: 1rem 0;
   }
   .logo-container {
     .footer-logo-container {
-      @include mx.screen-max(768px) {display: none;}
+      @include mx.screen-max(768px) {
+        display: none;
+      }
       .img-white-line {
         filter: invert(80%);
       }
@@ -26,10 +25,7 @@
   }
   .footer-copyright {
     h2 {
-      font-family: 'Nunito Sans';
-      font-weight: 400;
-      font-size: 1.9rem;
-      margin: 0;
+      @include mx.font-nunito($size: 1.9rem, $color: #fff);
     }
   }
 }

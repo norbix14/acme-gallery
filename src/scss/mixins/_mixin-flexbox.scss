@@ -1,0 +1,5 @@
+@mixin flex-align-center($gap: 2rem) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}

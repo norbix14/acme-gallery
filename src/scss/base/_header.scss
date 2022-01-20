@@ -1,27 +1,29 @@
-@use 'variables' as v;
-@use 'mixins' as mx;
+@use '../variables' as v;
+@use '../mixins' as mx;
 
 .nav-header {
-  display: flex;
+  @include mx.flex-align-center;
   justify-content: space-between;
-  align-items: center;
   height: 6.8rem;
   .actions {
     .login {
-      @include mx.screen-max(768px) { display: none;}
+      @include mx.screen-max(768px) {
+        display: none;
+      }
       .btn-login {
+        @include mx.font-roboto($weight: 500, $color: #fff);
         background-color: v.$pinkColorMain;
         text-transform: uppercase;
         border-radius: 0.8rem;
-        color: #fff;
         padding: 1.2rem 2rem;
-        font-weight: 500;
         outline: none;
         border: none;
       }
     }
     .hamburger {
-      @include mx.screen-min(768px){ display: none;}
+      @include mx.screen-min(768px) {
+        display: none;
+      }
       width: 4rem;
       height: 3.6rem;
       background-color: v.$pinkColorMain;

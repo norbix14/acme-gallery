@@ -1,23 +1,22 @@
+@use '../mixins' as mx;
+
 .search-bar {
   padding: 2rem 0;
   .form-container {
     display: flex;
     justify-content: flex-end;
     .search-form {
-      display: flex;
-      align-items: center;
+      @include mx.flex-align-center($gap: 1rem);
       .description {
         h3 {
-          color: #888;
+          @include mx.font-roboto($size: 2rem, $color: #888);
         }
       }
       .input-data {
+        @include mx.flex-align-center($gap: 0);
         background-color: #ececec;
-        position: relative;
-        border-radius: 0.4rem;
+        border-radius: 1rem;
         overflow: hidden;
-        display: flex;
-        align-items: center;
         input {
           border: none;
           background-color: #ececec;
@@ -38,7 +37,6 @@
 
 @media only screen and (min-width: 768px) {
   .input-data {
-    margin: 0 0 0 1rem;
     input {
       width: 85%;
     }
@@ -54,7 +52,6 @@
     width: 100%;
   }
   .input-data {
-    margin: 0;
     input {
       width: 90%;
     }
